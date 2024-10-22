@@ -29,7 +29,7 @@ def genFileDirectory(path):
 
 def sendMetadataDesc():
     parma = {
-        "chat_id": -1002411275115,
+        "chat_id": -1002444094156,
         "text": os.environ["COMMIT_MESSAGE"],
     }
     response = requests.post(urlPrefix + "/sendMessage", params=parma)
@@ -40,7 +40,7 @@ def sendMetadataDesc():
 
 def sendAPKs(path):
     startMessageParma = {
-        "chat_id": -1002411275115,
+        "chat_id": -1002459438258,
         "text": "==== ====",
     }
     startMessageResponse = requests.post(urlPrefix + "/sendMessage", params=startMessageParma)
@@ -59,7 +59,7 @@ def sendAPKs(path):
     ]
 
     parma = {
-        "chat_id": -1002411275115,
+        "chat_id": -1001714986438,
         "media": json.dumps(media)
     }
 
@@ -70,7 +70,7 @@ def sendAPKs(path):
 
 def sendMetadata(changesID, startID):
     parma = {
-        "chat_id": -1002411275115,
+        "chat_id": -1002444094156,
         "text": str(os.getenv("VERSION_NAME")) + "," + str(os.getenv("VERSION_CODE")) + "," + str(startID) + "," + str(changesID) + ",false"
     }
     response = requests.get(urlPrefix + "/sendMessage", params=parma)
